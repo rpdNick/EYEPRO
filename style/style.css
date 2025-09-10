@@ -1,0 +1,216 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  background: #000000;
+}
+body .container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 40px 80px;
+}
+body .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #141414;
+  border-radius: 24px;
+  border: 1px solid #202020;
+  padding: 40px 32px;
+}
+body .header .logo.mob {
+  display: none;
+}
+body .content {
+  margin-top: 46px;
+}
+body .content > .title {
+  font-size: 48px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+body .content > .subtitle {
+  font-family: "Open Sans", sans-serif;
+  font-size: 24px;
+  color: #98A1A1;
+}
+body .content .cards_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  margin-top: 40px;
+}
+body .content .card {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+}
+body .content .card.worker {
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+  min-width: 500px;
+  flex: 1;
+  min-height: 359px;
+  border: 1px solid #202020;
+}
+body .content .card.worker .title,
+body .content .card.worker .description {
+  position: relative;
+  z-index: 1;
+}
+body .content .card.worker .title {
+  font-size: 48px;
+  color: #ffffff;
+  font-weight: bold;
+}
+body .content .card.worker .description {
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  margin: 24px 0 15px;
+  color: #FDFDFD;
+  max-width: 382px;
+}
+body .content .card.worker .button {
+  margin-top: auto;
+}
+body .content .card.worker.violet {
+  background: rgba(159, 175, 255, 0.4);
+}
+body .content .card.worker.burgundy {
+  background: rgba(255, 159, 160, 0.4);
+}
+body .content .card.worker .card_img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  max-width: 222px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+body .footer {
+  margin-top: 68px;
+  border-radius: 24px;
+  background: #141414;
+  border: 1px solid #202020;
+  padding: 32px;
+}
+body .footer .info {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 40px 120px;
+  max-width: 816px;
+  margin: 0 auto;
+}
+body .footer .info .item {
+  min-width: 192px;
+  max-width: 192px;
+}
+body .footer .info .item .title {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+}
+body .footer .info .item .title .icon {
+  width: 22px;
+}
+body .footer .info .item .title .icon.phone {
+  width: 24px;
+}
+body .footer .info .item .info_list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-family: "Open Sans", sans-serif;
+  color: #98A1A1;
+  font-size: 14px;
+  margin-top: 20px;
+}
+body .button {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: bold;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+body .button.transparent {
+  background: transparent;
+}
+body .button.primary {
+  border: 1px solid #202020;
+}
+body .button.secondary {
+  border: 1px solid #ffffff;
+}
+body .button.white {
+  background: white;
+}
+body .button.round {
+  border-radius: 50%;
+}
+body .button.icon {
+  gap: 2px;
+}
+@media screen and (max-width: 768px) {
+  body .container {
+    padding: 24px;
+  }
+  body .content .card.worker {
+    padding: 16px;
+  }
+}
+@media screen and (max-width: 576px) {
+  body .header .logo.desk {
+    display: none;
+  }
+  body .header .logo.mob {
+    display: block;
+  }
+  body .content {
+    margin-top: 24px;
+  }
+  body .content > .title {
+    font-size: 24px;
+  }
+  body .content > .subtitle {
+    font-size: 16px;
+  }
+  body .content .cards_wrapper {
+    margin-top: 16px;
+    gap: 16px;
+  }
+  body .content .card.worker {
+    min-height: 216px;
+    min-width: 100%;
+    padding: 16px 70px 16px 16px;
+  }
+  body .content .card.worker .card_img {
+    max-width: 132px;
+  }
+  body .content .card.worker .title {
+    font-size: 24px;
+  }
+  body .content .card.worker .description {
+    margin: 8px 0 15px;
+    font-size: 10px;
+    max-width: 206pxcccc;
+  }
+  body .footer {
+    margin-top: 24px;
+  }
+}/*# sourceMappingURL=style.css.map */
