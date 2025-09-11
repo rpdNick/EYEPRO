@@ -11,8 +11,10 @@ $descriptionColor: #FDFDFD;
 $card-violet: rgba(#9FAFFF, 0.4);
 $card-burgundy: rgba(#FF9FA0, 0.4);
 $card-brown: rgba(#FFBB9F, 0.4);
+$card-brown2: rgba(#FFCC9F, 0.4);
 $card-darkpink: rgba(#FF9FC8, 0.4);
 $card-green-300: rgba(#E4FF9F, 0.4);
+$card-green-400: rgba(#A8FF9F, 0.4);
 
 // slider cards colors:
 $card-color-1: rgba(#FF9F9F, 0.4);
@@ -23,12 +25,7 @@ $card-color-5: rgba(#FF9FF9, 0.4);
 
 $sm: 576px;
 $md: 768px;
-
-// $card-violet: #7A667F;
-// $card-green: #5E765D;
-// $card-brown: #7B654F;
-// $card-lightbrown: #9B8368;
-// $card-darkgreen: #3E5A47;
+$lg: 1080px;
 
 * {
   margin: 0;
@@ -117,12 +114,20 @@ body {
         background: $card-brown;
       }
 
+      &.brown2 {
+        background: $card-brown2;
+      }
+
       &.darkpink {
         background: $card-darkpink;
       }
 
       &.green_300 {
         background: $card-green-300;
+      }
+
+      &.green_400 {
+        background: $card-green-400;
       }
 
       .title,
@@ -135,7 +140,37 @@ body {
         margin-top: auto;
       }
 
+      &.single {
+        padding: 32px 520px 32px 32px;
+        flex: 1;
 
+        .title {
+          font-size: 48px;
+          color: $white;
+          font-weight: bold;
+        }
+
+        .description {
+          font-size: 16px;
+          font-family: $open-sans;
+          margin: 24px 0 15px;
+          color: $descriptionColor;
+          max-width: 753px;
+          min-width: 400px;
+        }
+
+        .card_img {
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          max-width: 520px;
+          object-fit: contain;
+
+          &.mob {
+            display: none;
+          }
+        }
+      }
 
       &.pair {
         padding: 32px;
@@ -163,6 +198,11 @@ body {
           bottom: 0;
           max-width: 222px;
           object-fit: contain;
+
+          &.top {
+            bottom: unset;
+            top: 0;
+          }
         }
       }
 
@@ -365,6 +405,28 @@ body {
     }
   }
 
+  @media screen and (max-width: $lg) {
+    .content {
+      .card {
+        &.single {
+          padding: 32px 120px 32px 32px;
+
+          .card_img {
+            top: 0;
+
+            &.desk {
+              display: none;
+            }
+
+            &.mob {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
+
   @media screen and (max-width: $md) {
     .container {
       padding: 24px;
@@ -372,6 +434,32 @@ body {
 
     .content {
       .card {
+        &.single {
+          padding: 16px 120px 16px 16px;
+
+          .title {
+            font-size: 24px;
+          }
+
+          .description {
+            font-size: 10px;
+            min-width: 206px;
+            margin: 8px 0 15px;
+          }
+
+          .card_img {
+            top: 0;
+
+            &.desk {
+              display: none;
+            }
+
+            &.mob {
+              display: block;
+            }
+          }
+        }
+
         &.pair {
           padding: 16px;
         }
@@ -427,6 +515,10 @@ body {
 
           .card_img {
             max-width: 132px;
+
+            &.luminous {
+              max-width: 86px;
+            }
           }
 
           .title {

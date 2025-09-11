@@ -71,11 +71,17 @@ body .content .card.burgundy {
 body .content .card.brown {
   background: rgba(255, 187, 159, 0.4);
 }
+body .content .card.brown2 {
+  background: rgba(255, 204, 159, 0.4);
+}
 body .content .card.darkpink {
   background: rgba(255, 159, 200, 0.4);
 }
 body .content .card.green_300 {
   background: rgba(228, 255, 159, 0.4);
+}
+body .content .card.green_400 {
+  background: rgba(168, 255, 159, 0.4);
 }
 body .content .card .title,
 body .content .card .description {
@@ -84,6 +90,34 @@ body .content .card .description {
 }
 body .content .card .button {
   margin-top: auto;
+}
+body .content .card.single {
+  padding: 32px 520px 32px 32px;
+  flex: 1;
+}
+body .content .card.single .title {
+  font-size: 48px;
+  color: #ffffff;
+  font-weight: bold;
+}
+body .content .card.single .description {
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  margin: 24px 0 15px;
+  color: #FDFDFD;
+  max-width: 753px;
+  min-width: 400px;
+}
+body .content .card.single .card_img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  max-width: 520px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+body .content .card.single .card_img.mob {
+  display: none;
 }
 body .content .card.pair {
   padding: 32px;
@@ -110,6 +144,10 @@ body .content .card.pair .card_img {
   max-width: 222px;
   -o-object-fit: contain;
      object-fit: contain;
+}
+body .content .card.pair .card_img.top {
+  bottom: unset;
+  top: 0;
 }
 body .content .card.triple {
   padding: 32px;
@@ -272,9 +310,43 @@ body .button.secondary {
 body .button.icon {
   gap: 2px;
 }
+@media screen and (max-width: 1080px) {
+  body .content .card.single {
+    padding: 32px 120px 32px 32px;
+  }
+  body .content .card.single .card_img {
+    top: 0;
+  }
+  body .content .card.single .card_img.desk {
+    display: none;
+  }
+  body .content .card.single .card_img.mob {
+    display: block;
+  }
+}
 @media screen and (max-width: 768px) {
   body .container {
     padding: 24px;
+  }
+  body .content .card.single {
+    padding: 16px 120px 16px 16px;
+  }
+  body .content .card.single .title {
+    font-size: 24px;
+  }
+  body .content .card.single .description {
+    font-size: 10px;
+    min-width: 206px;
+    margin: 8px 0 15px;
+  }
+  body .content .card.single .card_img {
+    top: 0;
+  }
+  body .content .card.single .card_img.desk {
+    display: none;
+  }
+  body .content .card.single .card_img.mob {
+    display: block;
   }
   body .content .card.pair {
     padding: 16px;
@@ -314,6 +386,9 @@ body .button.icon {
   }
   body .content .card.pair .card_img {
     max-width: 132px;
+  }
+  body .content .card.pair .card_img.luminous {
+    max-width: 86px;
   }
   body .content .card.pair .title {
     font-size: 24px;
