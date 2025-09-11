@@ -11,6 +11,7 @@ $card-violet: rgba(#9FAFFF, 0.4);
 $card-burgundy: rgba(#FF9FA0, 0.4);
 $card-brown: rgba(#FFBB9F, 0.4);
 $card-darkpink: rgba(#FF9FC8, 0.4);
+$card-green-300: rgba(#E4FF9F, 0.4);
 
 $sm: 576px;
 $md: 768px;
@@ -73,29 +74,62 @@ body {
     .cards_wrapper {
       display: flex;
       flex-wrap: wrap;
-      gap: 32px;
       margin-top: 40px;
+
+      &.pair {
+        gap: 32px;
+      }
+
+      &.triple {
+        gap: 24px;
+      }
     }
 
     .card {
+      display: flex;
+      flex-direction: column;
       position: relative;
       border-radius: 24px;
       overflow: hidden;
+      border: 1px solid $borderGray;
 
-      &.worker {
-        display: flex;
-        flex-direction: column;
+      &.violet {
+        background: $card-violet;
+      }
+
+      &.burgundy {
+        background: $card-burgundy;
+      }
+
+      &.brown {
+        background: $card-brown;
+      }
+
+      &.darkpink {
+        background: $card-darkpink;
+      }
+
+      &.green_300 {
+        background: $card-green-300;
+      }
+
+      .title,
+      .description {
+        position: relative;
+        z-index: 1;
+      }
+
+      .button {
+        margin-top: auto;
+      }
+
+
+
+      &.pair {
         padding: 32px;
         min-width: 500px;
         flex: 1;
         min-height: 359px;
-        border: 1px solid $borderGray;
-
-        .title,
-        .description {
-          position: relative;
-          z-index: 1;
-        }
 
         .title {
           font-size: 48px;
@@ -111,24 +145,51 @@ body {
           max-width: 382px;
         }
 
-        .button {
-          margin-top: auto;
-        }
-
-        &.violet {
-          background: $card-violet;
-        }
-
-        &.burgundy {
-          background: $card-burgundy;
-        }
-
         .card_img {
           position: absolute;
           right: 0;
           bottom: 0;
           max-width: 222px;
           object-fit: contain;
+        }
+      }
+
+      &.triple {
+        padding: 32px;
+        flex: 1;
+        min-width: 330px;
+
+        .title {
+          font-size: 48px;
+          color: $white;
+          font-weight: bold;
+        }
+
+        .description {
+          font-size: 16px;
+          font-family: $open-sans;
+          margin: 24px 0;
+          color: #FDFDFD;
+          max-width: 341px;
+        }
+
+        .card_img {
+          position: absolute;
+          right: 0;
+          top: 0;
+          object-fit: contain;
+
+          &.lamp {
+            max-width: 115px;
+          }
+
+          &.disinfection {
+            max-width: 121px;
+          }
+
+          .lamp2 {
+            max-width: 118px;
+          }
         }
       }
     }
@@ -226,7 +287,7 @@ body {
 
     .content {
       .card {
-        &.worker {
+        &.pair {
           padding: 16px;
         }
       }
@@ -235,6 +296,8 @@ body {
 
   @media screen and (max-width: $sm) {
     .header {
+      padding: 18px 24px;
+
       .logo {
         &.desk {
           display: none;
@@ -259,13 +322,22 @@ body {
 
       .cards_wrapper {
         margin-top: 16px;
-        gap: 16px;
+
+        &.pair,
+        &.triple {
+          gap: 16px;
+        }
       }
 
       .card {
-        &.worker {
-          min-height: 216px;
+
+        &.pair,
+        &.triple {
           min-width: 100%;
+        }
+
+        &.pair {
+          min-height: 216px;
           padding: 16px 70px 16px 16px;
 
           .card_img {
@@ -279,7 +351,18 @@ body {
           .description {
             margin: 8px 0 15px;
             font-size: 10px;
-            max-width: 206pxcccc;
+            max-width: 206px;
+          }
+        }
+
+        &.triple {
+          .title {
+            font-size: 24px;
+          }
+
+          .description {
+            font-size: 12px;
+            max-width: 191px;
           }
         }
       }

@@ -43,56 +43,103 @@ body .content > .subtitle {
 body .content .cards_wrapper {
   display: flex;
   flex-wrap: wrap;
-  gap: 32px;
   margin-top: 40px;
 }
+body .content .cards_wrapper.pair {
+  gap: 32px;
+}
+body .content .cards_wrapper.triple {
+  gap: 24px;
+}
 body .content .card {
+  display: flex;
+  flex-direction: column;
   position: relative;
   border-radius: 24px;
   overflow: hidden;
+  border: 1px solid #202020;
 }
-body .content .card.worker {
-  display: flex;
-  flex-direction: column;
+body .content .card.violet {
+  background: rgba(159, 175, 255, 0.4);
+}
+body .content .card.burgundy {
+  background: rgba(255, 159, 160, 0.4);
+}
+body .content .card.brown {
+  background: rgba(255, 187, 159, 0.4);
+}
+body .content .card.darkpink {
+  background: rgba(255, 159, 200, 0.4);
+}
+body .content .card.green_300 {
+  background: rgba(228, 255, 159, 0.4);
+}
+body .content .card .title,
+body .content .card .description {
+  position: relative;
+  z-index: 1;
+}
+body .content .card .button {
+  margin-top: auto;
+}
+body .content .card.pair {
   padding: 32px;
   min-width: 500px;
   flex: 1;
   min-height: 359px;
-  border: 1px solid #202020;
 }
-body .content .card.worker .title,
-body .content .card.worker .description {
-  position: relative;
-  z-index: 1;
-}
-body .content .card.worker .title {
+body .content .card.pair .title {
   font-size: 48px;
   color: #ffffff;
   font-weight: bold;
 }
-body .content .card.worker .description {
+body .content .card.pair .description {
   font-size: 16px;
   font-family: "Open Sans", sans-serif;
   margin: 24px 0 15px;
   color: #FDFDFD;
   max-width: 382px;
 }
-body .content .card.worker .button {
-  margin-top: auto;
-}
-body .content .card.worker.violet {
-  background: rgba(159, 175, 255, 0.4);
-}
-body .content .card.worker.burgundy {
-  background: rgba(255, 159, 160, 0.4);
-}
-body .content .card.worker .card_img {
+body .content .card.pair .card_img {
   position: absolute;
   right: 0;
   bottom: 0;
   max-width: 222px;
   -o-object-fit: contain;
      object-fit: contain;
+}
+body .content .card.triple {
+  padding: 32px;
+  flex: 1;
+  min-width: 330px;
+}
+body .content .card.triple .title {
+  font-size: 48px;
+  color: #ffffff;
+  font-weight: bold;
+}
+body .content .card.triple .description {
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+  margin: 24px 0;
+  color: #FDFDFD;
+  max-width: 341px;
+}
+body .content .card.triple .card_img {
+  position: absolute;
+  right: 0;
+  top: 0;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+body .content .card.triple .card_img.lamp {
+  max-width: 115px;
+}
+body .content .card.triple .card_img.disinfection {
+  max-width: 121px;
+}
+body .content .card.triple .card_img .lamp2 {
+  max-width: 118px;
 }
 body .footer {
   margin-top: 68px;
@@ -170,11 +217,14 @@ body .button.icon {
   body .container {
     padding: 24px;
   }
-  body .content .card.worker {
+  body .content .card.pair {
     padding: 16px;
   }
 }
 @media screen and (max-width: 576px) {
+  body .header {
+    padding: 18px 24px;
+  }
   body .header .logo.desk {
     display: none;
   }
@@ -192,23 +242,34 @@ body .button.icon {
   }
   body .content .cards_wrapper {
     margin-top: 16px;
+  }
+  body .content .cards_wrapper.pair, body .content .cards_wrapper.triple {
     gap: 16px;
   }
-  body .content .card.worker {
-    min-height: 216px;
+  body .content .card.pair, body .content .card.triple {
     min-width: 100%;
+  }
+  body .content .card.pair {
+    min-height: 216px;
     padding: 16px 70px 16px 16px;
   }
-  body .content .card.worker .card_img {
+  body .content .card.pair .card_img {
     max-width: 132px;
   }
-  body .content .card.worker .title {
+  body .content .card.pair .title {
     font-size: 24px;
   }
-  body .content .card.worker .description {
+  body .content .card.pair .description {
     margin: 8px 0 15px;
     font-size: 10px;
-    max-width: 206pxcccc;
+    max-width: 206px;
+  }
+  body .content .card.triple .title {
+    font-size: 24px;
+  }
+  body .content .card.triple .description {
+    font-size: 12px;
+    max-width: 191px;
   }
   body .footer {
     margin-top: 24px;
