@@ -15,16 +15,14 @@ function initResponsiveSlider() {
     return slidesToShow;
   }
 
-  // Ініціалізація слайдера
   $slider.slick({
     dots: false,
     infinite: false,
-    speed: 500,
+    speed: 400,
     slidesToShow: getSlidesToShow(),
     slidesToScroll: 1,
   });
 
-  // При ресайзі перераховуємо slidesToShow
   $(window).on('resize', function () {
     const newSlidesToShow = getSlidesToShow();
     $slider.slick('slickSetOption', 'slidesToShow', newSlidesToShow, true);
