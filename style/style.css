@@ -51,6 +51,9 @@ body .content .cards_wrapper.pair {
 body .content .cards_wrapper.triple {
   gap: 24px;
 }
+body .content .slider_wrapper {
+  margin-top: 40px;
+}
 body .content .card {
   display: flex;
   flex-direction: column;
@@ -141,6 +144,68 @@ body .content .card.triple .card_img.disinfection {
 body .content .card.triple .card_img .lamp2 {
   max-width: 118px;
 }
+body .content .slider .slick-track {
+  display: flex;
+  gap: 24px;
+}
+body .content .slider .slick-track .card {
+  width: 237px;
+  min-width: 237px;
+  height: 283px;
+  padding: 24px;
+}
+body .content .slider .slick-track .card .title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 12px;
+  min-height: 48px;
+}
+body .content .slider .slick-track .card .description {
+  font-size: 14px;
+  color: #FDFDFD;
+  margin-bottom: 10px;
+}
+body .content .slider .slick-track .card.color_1 {
+  background: rgba(255, 159, 159, 0.4);
+}
+body .content .slider .slick-track .card.color_2 {
+  background: rgba(232, 255, 159, 0.4);
+}
+body .content .slider .slick-track .card.color_3 {
+  background: rgba(159, 255, 207, 0.4);
+}
+body .content .slider .slick-track .card.color_4 {
+  background: rgba(159, 179, 255, 0.4);
+}
+body .content .slider .slick-track .card.color_5 {
+  background: rgba(255, 159, 249, 0.4);
+}
+body .content .slider .slick-track::before, body .content .slider .slick-track::after {
+  display: none;
+}
+body .content .slider .slick-arrow {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  background: #ffffff;
+  border-radius: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+  z-index: 1;
+}
+body .content .slider .slick-arrow::before, body .content .slider .slick-arrow::after {
+  display: none;
+}
+body .content .slider .slick-prev {
+  left: -10px;
+  background-image: url(../images/icons/arrow_left.svg);
+}
+body .content .slider .slick-next {
+  right: -10px;
+  background-image: url(../images/icons/arrow_right.svg);
+}
 body .footer {
   margin-top: 68px;
   border-radius: 24px;
@@ -204,12 +269,6 @@ body .button.primary {
 body .button.secondary {
   border: 1px solid #ffffff;
 }
-body .button.white {
-  background: white;
-}
-body .button.round {
-  border-radius: 50%;
-}
 body .button.icon {
   gap: 2px;
 }
@@ -270,6 +329,15 @@ body .button.icon {
   body .content .card.triple .description {
     font-size: 12px;
     max-width: 191px;
+  }
+  body .content .slider {
+    margin: 0 -24px;
+  }
+  body .content .slider .slick-track::before, body .content .slider .slick-track::after {
+    display: block;
+  }
+  body .content .slider .slick-arrow {
+    display: none !important;
   }
   body .footer {
     margin-top: 24px;

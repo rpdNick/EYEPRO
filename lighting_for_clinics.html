@@ -9,6 +9,12 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
     rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+    integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   <link rel="stylesheet" href="./style/style.css">
   <title>EYEPRO Company</title>
 </head>
@@ -27,33 +33,38 @@
     </div>
     <section class="content">
       <div class="title">
-        Healthcare Lighting
+        Lighting for clinics
       </div>
       <div class="subtitle">
-        Creating Comfortable and Safe Environments
+        Creating Safe, Comfortable, and Efficient Clinic Spaces
       </div>
-      <div class="cards_wrapper triple">
-        <div class="card triple brown">
-          <div class="title">Lighting <br> for clinics</div>
-          <div class="description">Proper lighting in clinics enhances patient comfort and staff efficiency. Modern
-            systems ensure visibility, safety, and a welcoming environment.</div>
-          <a class="button secondary transparent" href="./lighting_for_clinics.html">Learn More</a>
-          <img class="card_img lamp" src="./images/cards/lamp.png" alt="lamp">
-        </div>
-        <div class="card triple darkpink">
-          <div class="title">UV-C <br> Disinfection</div>
-          <div class="description">UV-C technology helps disinfect surfaces and reduce infection spread, providing an
-            effective solution for healthcare and public spaces.</div>
-          <a class="button secondary transparent" href="#">Learn More</a>
-          <img class="card_img lamp" src="./images/cards/disinfection.png" alt="disinfection">
-        </div>
-        <div class="card triple green_300">
-          <div class="title">Design <br> Lighting</div>
-          <div class="description">Thoughtful design lighting balances aesthetics and functionality in healthcare
-            spaces. It enhances mood, orientation, and patient satisfaction.
-            Learn More</div>
-          <a class="button secondary transparent" href="#">Learn More</a>
-          <img class="card_img lamp2" src="./images/cards/lamp2.png" alt="lamp2">
+      <div class="slider_wrapper">
+        <div class="slider slider_lighting">
+          <div class="card color_1">
+            <div class="title">Consultation and Examination Room</div>
+            <div class="description">Efficient Lighting for Accurate Diagnosis</div>
+            <a class="button secondary transparent" href="#">Learn More</a>
+          </div>
+          <div class="card color_2">
+            <div class="title">Patient Room</div>
+            <div class="description">Comfortable and Healing Lighting</div>
+            <a class="button secondary transparent" href="#">Learn More</a>
+          </div>
+          <div class="card color_3">
+            <div class="title">Neonatal Intensive Care Unit (NICU)</div>
+            <div class="description">Gentle, Precise Lighting for Newborns</div>
+            <a class="button secondary transparent" href="#">Learn More</a>
+          </div>
+          <div class="card color_4">
+            <div class="title">Delivery Room</div>
+            <div class="description">Safe and Comfortable Lighting for Delivery</div>
+            <a class="button secondary transparent" href="#">Learn More</a>
+          </div>
+          <div class="card color_5">
+            <div class="title">Intensive Care Unit</div>
+            <div class="description">Critical Lighting for Patient Care</div>
+            <a class="button secondary transparent" href="#">Learn More</a>
+          </div>
         </div>
       </div>
     </section>
@@ -97,6 +108,7 @@
       </div>
     </div>
   </div>
+  <script src="./js/slider_lighting.js"></script>
 </body>
 
 </html>

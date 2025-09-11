@@ -6,12 +6,20 @@ $white: #ffffff;
 $borderGray: #202020;
 $panelDark: #141414;
 $txtGray: #98A1A1;
+$descriptionColor: #FDFDFD;
 
 $card-violet: rgba(#9FAFFF, 0.4);
 $card-burgundy: rgba(#FF9FA0, 0.4);
 $card-brown: rgba(#FFBB9F, 0.4);
 $card-darkpink: rgba(#FF9FC8, 0.4);
 $card-green-300: rgba(#E4FF9F, 0.4);
+
+// slider cards colors:
+$card-color-1: rgba(#FF9F9F, 0.4);
+$card-color-2: rgba(#E8FF9F, 0.4);
+$card-color-3: rgba(#9FFFCF, 0.4);
+$card-color-4: rgba(#9FB3FF, 0.4);
+$card-color-5: rgba(#FF9FF9, 0.4);
 
 $sm: 576px;
 $md: 768px;
@@ -85,6 +93,10 @@ body {
       }
     }
 
+    .slider_wrapper {
+      margin-top: 40px;
+    }
+
     .card {
       display: flex;
       flex-direction: column;
@@ -141,7 +153,7 @@ body {
           font-size: 16px;
           font-family: $open-sans;
           margin: 24px 0 15px;
-          color: #FDFDFD;
+          color: $descriptionColor;
           max-width: 382px;
         }
 
@@ -169,7 +181,7 @@ body {
           font-size: 16px;
           font-family: $open-sans;
           margin: 24px 0;
-          color: #FDFDFD;
+          color: $descriptionColor;
           max-width: 341px;
         }
 
@@ -191,6 +203,87 @@ body {
             max-width: 118px;
           }
         }
+      }
+    }
+
+    .slider {
+      .slick-track {
+        display: flex;
+        gap: 24px;
+
+        .card {
+          width: 237px;
+          min-width: 237px;
+          height: 283px;
+          padding: 24px;
+
+          .title {
+            font-size: 20px;
+            font-weight: bold;
+            color: $white;
+            margin-bottom: 12px;
+            min-height: 48px;
+          }
+
+          .description {
+            font-size: 14px;
+            color: $descriptionColor;
+            margin-bottom: 10px;
+          }
+
+          &.color_1 {
+            background: $card-color-1;
+          }
+
+          &.color_2 {
+            background: $card-color-2;
+          }
+
+          &.color_3 {
+            background: $card-color-3;
+          }
+
+          &.color_4 {
+            background: $card-color-4;
+          }
+
+          &.color_5 {
+            background: $card-color-5;
+          }
+        }
+
+        &::before,
+        &::after {
+          display: none;
+        }
+      }
+
+      .slick-arrow {
+        display: flex;
+        width: 40px;
+        height: 40px;
+        background: $white;
+        border-radius: 50%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 24px 24px;
+        z-index: 1;
+
+
+        &::before,
+        &::after {
+          display: none;
+        }
+      }
+
+      .slick-prev {
+        left: -10px;
+        background-image: url(../images/icons/arrow_left.svg);
+      }
+
+      .slick-next {
+        right: -10px;
+        background-image: url(../images/icons/arrow_right.svg);
       }
     }
   }
@@ -265,14 +358,6 @@ body {
 
     &.secondary {
       border: 1px solid $white;
-    }
-
-    &.white {
-      background: white;
-    }
-
-    &.round {
-      border-radius: 50%;
     }
 
     &.icon {
@@ -364,6 +449,22 @@ body {
             font-size: 12px;
             max-width: 191px;
           }
+        }
+      }
+
+      .slider {
+        margin: 0 -24px;
+
+        .slick-track {
+
+          &::before,
+          &::after {
+            display: block;
+          }
+        }
+
+        .slick-arrow {
+          display: none !important;
         }
       }
     }
